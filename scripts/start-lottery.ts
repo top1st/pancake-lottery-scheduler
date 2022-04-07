@@ -38,11 +38,14 @@ const main = async () => {
         ]);
 
         // Get ticket price (denominated in $Cake), for a given network.
-        const ticketPrice: string = await getTicketPrice(
-          networkName,
-          config.Ticket.Price[networkName],
-          config.Ticket.Precision[networkName]
-        );
+
+        // const ticketPrice: string = await getTicketPrice(
+        //   networkName,
+        //   config.Ticket.Price[networkName],
+        //   config.Ticket.Precision[networkName]
+        // );
+
+        const ticketPrice = "10000" // 10000 PXT
 
         // Create, sign and broadcast transaction.
         const tx = await contract.startLottery(
