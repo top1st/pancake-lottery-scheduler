@@ -1,6 +1,8 @@
 import type { HardhatUserConfig } from "hardhat/types";
 import { task } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+require("dotenv").config()
 
 task("accounts", "Prints the list of accounts", async (args, { ethers }) => {
   const [operator] = await ethers.getSigners();
